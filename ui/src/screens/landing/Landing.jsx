@@ -13,20 +13,9 @@ export const Landing = () => {
     navigate('/info');
   };
 
-  const handleFileUpload = async event => {
-    const file = event.target.files[0];
-
-    if (!file || file.type !== 'text/csv') {
-      return;
-    }
-
-    setLoading(true);
-
-    const { id } = await uploadData(file);
-    navigate(`/results/${id}`);
-
-    setLoading(false);
-  };
+  const handleModelClick = () => {
+    navigate('/models');
+  }
 
   return (
     <Box
@@ -55,11 +44,9 @@ export const Landing = () => {
           Medical
         </Text>
 
-        <FileInput onChange={handleFileUpload} accept='text/csv'>
-          <Button size='lg' mb={4} isLoading={loading} disabled={loading}>
-            Upload CSV to get insights
-          </Button>
-        </FileInput>
+        <Button size='lg' mb={4} onClick={handleModelClick}>
+          Test our ML models
+        </Button>
 
         <Button
           color='white'

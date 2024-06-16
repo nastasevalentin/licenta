@@ -4,6 +4,7 @@ import { Landing } from './screens/landing';
 import { Info } from './screens/info';
 import { Results } from './screens/results';
 import { SkinDisease } from './models/skinDisease/SkinDisease';
+import { Models } from './screens/models/Models.jsx';
 
 export const App = () => (
   <ChakraProvider>
@@ -13,6 +14,7 @@ export const App = () => (
         <Route exact path='/info' element={<Info />} />
         <Route path='/results/:id' element={<Results />} />
         <Route path='/skin-disease-detection' element={<SkinDisease/>} />
+        <Route path='/models' element={<Models/>}/>
       </Routes>
     </BrowserRouter>
   </ChakraProvider>
