@@ -14,9 +14,9 @@ CORS(app, resources={r"/skin_disease_model": {"origins": "http://localhost:3000"
 
 
 models = {
-    'dermatology_model': load_model(os.path.join('models', 'dermatology_model')),
-    'head_hemorrhage_model': load_model(os.path.join('models', 'head_hemorrhage_model')),
-    'pneumonia_model': load_model(os.path.join('models', 'pneumonia_model')),
+    'dermatology_model': load_model(os.path.join('new_models', 'dermatology_model.keras')),
+    'head_hemorrhage_model': load_model(os.path.join('new_models', 'head_hemorrhage_model.keras')),
+    'pneumonia_model': load_model(os.path.join('new_models', 'pneumonia_model.keras')),
 }
 
 def prepare_image(image, target_size):
