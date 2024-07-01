@@ -1,12 +1,8 @@
 import { useState } from 'react';
 import { Button, Flex, Text, Box } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
-import { FileInput } from '../../components/FileInput';
-import { uploadData } from '../../api';
 
 export const Landing = () => {
-  const [loading, setLoading] = useState(false);
-
   const navigate = useNavigate();
 
   const handleInfoClick = () => {
